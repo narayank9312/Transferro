@@ -6,6 +6,8 @@ function SearchFeed() {
   const [city, setCity] = React.useState("");
   const [dest, setDest] = React.useState("");
   const [date, setDate] = React.useState(new Date());
+  const [time, setTime] = React.useState("");
+
   const handleChange = (event) => {
     console.log(event.target.value);
     setCity(event.target.value);
@@ -20,14 +22,23 @@ function SearchFeed() {
     console.log(event.target.value);
     setDate(event.target.value);
   };
+  const handletime = (event) => {
+    console.log(event.target.value);
+    setTime(event.target.value);
+  };
   return (
     <div>
-      <form style={{ width: "49.12rem" }}>
+      <form style={{ width: "100%", background: "#212121" }}>
         <select
           placeholder="Country"
           value={city}
           onChange={handleChange}
-          style={{ width: "100%", padding: "10px 10px", marginTop: "2rem" }}
+          style={{
+            padding: "10px 10px",
+            marginTop: "2rem",
+            width: "95%",
+            marginLeft: "10px",
+          }}
         >
           <option>From</option>
           {City.map((e, key) => {
@@ -38,7 +49,12 @@ function SearchFeed() {
           placeholder="Country"
           value={dest}
           onChange={handleDest}
-          style={{ width: "100%", padding: "10px 10px", marginTop: "2rem" }}
+          style={{
+            padding: "10px 10px",
+            marginTop: "2rem",
+            width: "95%",
+            marginLeft: "10px",
+          }}
         >
           <option>To</option>
           {City.map((e, key) => {
@@ -51,21 +67,32 @@ function SearchFeed() {
           name="trip-start"
           value={date}
           onChange={handleDate}
-          style={{ width: "100%", padding: "10px 10px", marginTop: "2rem" }}
+          style={{
+            padding: "10px 10px",
+            marginTop: "2rem",
+            width: "95%",
+            marginLeft: "10px",
+          }}
         />
         <input
           type="time"
           id="start"
           name="trip-start"
           value={date}
-          onChange={handleDate}
-          style={{ width: "100%", padding: "10px 10px", marginTop: "2rem" }}
+          onChange={handletime}
+          style={{
+            padding: "10px 10px",
+            marginTop: "2rem",
+            width: "95%",
+            marginLeft: "10px",
+          }}
         />
         <Button
           style={{
             padding: "10px 10px",
-            marginTop: "2rem",
-            marginLeft: "87%",
+            marginTop: "1rem",
+            marginLeft: "83%",
+            marginBottom: "1rem",
           }}
           variant="contained"
         >
