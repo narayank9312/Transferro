@@ -11,7 +11,6 @@ function Navbar() {
           <Link href={`/`}>Transferro</Link>
         </div>
         <div className={styles.navbar_content}>
-          {" "}
           <Link href={`/aboutUs`}>AboutUS</Link>
         </div>
       </div>
