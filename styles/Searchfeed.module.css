@@ -1,0 +1,23 @@
+.parent {
+  width: 100%;
+  background: #212121;
+}
+.details_typography {
+  padding: 10px 10px;
+  margin-top: 2rem;
+  font-size: 20px;
+  font-weight: 600;
+  color: #004a7f;
+}
+.box_styles {
+  padding: 10px 10px;
+  margin-top: 2rem;
+  width: 95%;
+  margin-left: 10px;
+}
+.button_styles {
+  padding: 10px 10px;
+  margin-top: 1rem;
+  margin-left: 83%;
+  margin-bottom: 1rem;
+}

@@ -1,6 +1,8 @@
 import { Button } from "@mui/material";
+import Link from "next/link";
 import React from "react";
 import { City } from "../../constants/city";
+import styles from "../../styles/Searchfeed.module.css";
 
 function SearchFeed() {
   const [city, setCity] = React.useState("");
@@ -28,26 +30,13 @@ function SearchFeed() {
   };
   return (
     <div>
-      <form style={{ width: "100%", background: "#212121" }}>
-        <div
-          style={{
-            padding: "10px 10px",
-            marginTop: "2rem",
-            fontSize: "20px",
-          }}
-        >
-          Journey Details
-        </div>
+      <form className={styles.parent}>
+        <div className={styles.details_typography}>Journey Details</div>
         <select
           placeholder="Country"
           value={city}
           onChange={handleChange}
-          style={{
-            padding: "10px 10px",
-            marginTop: "2rem",
-            width: "95%",
-            marginLeft: "10px",
-          }}
+          className={styles.box_styles}
         >
           <option>From</option>
           {City.map((e, key) => {
@@ -58,12 +47,7 @@ function SearchFeed() {
           placeholder="Country"
           value={dest}
           onChange={handleDest}
-          style={{
-            padding: "10px 10px",
-            marginTop: "2rem",
-            width: "95%",
-            marginLeft: "10px",
-          }}
+          className={styles.box_styles}
         >
           <option>To</option>
           {City.map((e, key) => {
@@ -76,12 +60,7 @@ function SearchFeed() {
           name="trip-start"
           value={date}
           onChange={handleDate}
-          style={{
-            padding: "10px 10px",
-            marginTop: "2rem",
-            width: "95%",
-            marginLeft: "10px",
-          }}
+          className={styles.box_styles}
         />
         <input
           type="time"
@@ -89,23 +68,10 @@ function SearchFeed() {
           name="trip-start"
           value={date}
           onChange={handletime}
-          style={{
-            padding: "10px 10px",
-            marginTop: "2rem",
-            width: "95%",
-            marginLeft: "10px",
-          }}
+          className={styles.box_styles}
         />
-        <Button
-          style={{
-            padding: "10px 10px",
-            marginTop: "1rem",
-            marginLeft: "83%",
-            marginBottom: "1rem",
-          }}
-          variant="contained"
-        >
-          Contained
+        <Button className={styles.button_styles} variant="contained">
+          <Link href={"/vehiclelist"}>Search</Link>
         </Button>
       </form>
     </div>
