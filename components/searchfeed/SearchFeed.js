@@ -29,6 +29,15 @@ function SearchFeed() {
   return (
     <div>
       <form style={{ width: "100%", background: "#212121" }}>
+        <div
+          style={{
+            padding: "10px 10px",
+            marginTop: "2rem",
+            fontSize: "20px",
+          }}
+        >
+          Journey Details
+        </div>
         <select
           placeholder="Country"
           value={city}
