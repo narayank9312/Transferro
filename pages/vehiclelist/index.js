@@ -1,5 +1,5 @@
 import React from "react";
-import AvailableVehicle from "../../components/availablevehicles/AvailableVehicle";
+import AvailableVehicle from "../../components/availablevehicles/availableVehicle";
 import Footer from "../../components/footer/footer";
 import Navbar from "../../components/navbar/navbar";
 import styles from "../../styles/Home.module.css";
